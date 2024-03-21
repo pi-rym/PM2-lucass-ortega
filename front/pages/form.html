@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Form</title>
+    <style>
+        body {
+            background-color: #f0f0f0; /* Color de fondo claro */
+            font-family: Arial, sans-serif;
+        }
+
+        #form {
+            background-color: #fff; /* Fondo del formulario */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            transition: box-shadow 0.3s ease; /* Transición de sombra */
+        }
+
+        input[type="text"]:hover,
+        input[type="number"]:hover {
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Sombra al hacer hover */
+        }
+
+        .divButton {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff; /* Color de fondo del botón */
+            color: #fff; /* Color del texto del botón */
+            cursor: pointer;
+            transition: background-color 0.3s ease; /* Transición de color de fondo */
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Color de fondo al hacer hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-md">
+          <a class="navbar-brand" href="#">Proyecto M2</a>
+        </div>
+        <div>
+            <ul id="links">
+                <li><a href="../index.html">INICIO</a></li>
+                <li><a href="#sobremi">FILMS</a></li>
+                <li><a href="#">SERIES</a></li>
+                <li><a href="#">FORMULARIO</a></li>
+                <li><a href="#">CONTACTO</a></li>
+              </ul>
+        </div>
+      </nav>
+
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../images/New Batman movie 2021.jpg" class="d-block w-100" alt="...">
+          </div>
+          <!-- <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="..." class="d-block w-100" alt="...">
+          </div> -->
+        </div>
+      </div>
+
+
+
+    <main>
+        <h2>Crea Peliculas</h2>
+        <form id="form" name="form">
+            <label for="title">Titulo: </label>
+            <input type="text" id="title" name="title" required>
+            <br>
+
+            <label for="year">Año: </label>
+            <input type="number" id="year" name="year" min="1600" required>
+            <br><br>
+            <label for="director">Director:</label>
+            <Input type="text" id="director" name="director" required></Input>
+            <br><br>
+            <label for="duration">Duration:</label>
+            <Input type="text" id="duration" name="duration" required></Input>
+            <br><br>
+            <label for="genre">Género: </label>
+            <div id="options"></div>
+            <br><br>
+
+            <label for="rate">Calificación: </label>
+            <input type="number" id="rate" name="rate" step="0.01" min="1" max="10" required>
+            <br><br>
+
+            <label for="poster">Poster:</label>
+            <input type="text" id="poster" name="poster" required>
+            <br><br>
+
+            <div class="divButton">
+                <button type="button" id="btnSubmit">Crear Pelicula</button>
+                <button type="button" id="btnCleaner">Limpiar formulario</button>
+            </div>
+        </form>
+    </main>
+    <script src="../browser/films.js"></script>
+</body>
+</html>
