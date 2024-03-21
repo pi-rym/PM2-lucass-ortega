@@ -1,9 +1,9 @@
-const movieService = require('../services/movieService')
+const { getAllMovies} = require('../services/movieService')
 //movieService --> {getAllMovies : fn}
 const moviesController = async (req, res) => {
 
     try{
-        const response = await movieService.getAllMovies();
+        const response = await getAllMovies();
         res.status(200).json(response);
 
     } catch (error) {
